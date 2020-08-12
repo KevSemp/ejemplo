@@ -1,18 +1,4 @@
-## TDA
-Tipos de datos creados por el programador, que deben ser opacos (accesibilidad)
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-
-+ Tipos de datos 
-  + Enteros,reales,booleanos,caracteres
-Enumerados,arreglos
-Son Opacos
-
-
-## Listas
-
-+ Lista Simple 
-es aquella que el apuntador unicamente va hacia siguiente 
+## Ejemplo escritura de archivos binarios y mbr
 
 
 + Struct y librerias
