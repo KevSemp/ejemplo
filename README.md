@@ -151,4 +151,6 @@ func readNextBytes(file *os.File, number int) []byte {
 
 ```
 
+## Documentacion shida
+https://golang.org/pkg/os/
 
