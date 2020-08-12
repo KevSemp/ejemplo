@@ -154,4 +154,5 @@ func readNextBytes(file *os.File, number int) []byte {
 
 ## Documentacion shida
 https://golang.org/pkg/os/
+https://varunpant.com/posts/reading-and-writing-binary-files-in-go-lang/
 
