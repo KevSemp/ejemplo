@@ -26,7 +26,7 @@ type mbr2 struct { //3
 func main() {
 
     
-	writeFile(1000)
+	writeFile(100)
 	fmt.Println("Reading File: ")
 	readFile()
 }
@@ -70,7 +70,6 @@ func writeFile(tamanio int) {
      //y aqui ya podemos meter el mbr en la posicion 0 sin afectar el tamanio ya que cayo sobre los 100bytes
 	//Escritura del mbr
 	disco2 := mbr2{}
-	fmt.Println(uint8(tamanio))
 	disco2.Tamanio = uint8(tamanio)
 
 	s1 := &disco2
