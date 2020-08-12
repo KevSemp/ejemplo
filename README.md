@@ -79,7 +79,7 @@ func writeFile(tamanio int) {
 	
 	binary.Write(&binario2, binary.BigEndian, s1)
 	
-	//este metodo lo combierte en bytes y escribe en el archivo
+	//este metodo lo convierte en bytes y escribe en el archivo
 	writeNextBytes(file, binario2.Bytes())
 	
 
@@ -91,7 +91,7 @@ func writeFile(tamanio int) {
 
 
 
-+ Metodo para combertir a binario y escribir en el archivo
++ Metodo para convertir a binario y escribir en el archivo
 ```c++
 func writeNextBytes(file *os.File, bytes []byte) {
 
@@ -108,21 +108,22 @@ func writeNextBytes(file *os.File, bytes []byte) {
 + Metodos para leer el archivo 
 ```c++
 func readFile() {
-
+        //abrimos el archivo
 	file, err := os.Open("testess.bin")
 	defer file.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
-
+         //Nos posicionamos en el inicio en este caso porque sabemos que ahi esta el mbr
 	file.Seek(0, 0)
 
 	m2 := mbr2{}
 	
-
+         // proceso de convertir de binario a datos 
 	data := readNextBytes(file, 10)
 	buffer := bytes.NewBuffer(data)
-
+        
+	//mostramos la data del mbr
 	fmt.Println(data)
 
 	err = binary.Read(buffer, binary.BigEndian, &m2)
@@ -138,6 +139,7 @@ func readFile() {
 
 }
 
+//aqui lo convertimos de binario a number
 func readNextBytes(file *os.File, number int) []byte {
 	bytes := make([]byte, number)
 
