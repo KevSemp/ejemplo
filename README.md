@@ -138,7 +138,7 @@ func readFile() {
 
 }
 
-//aqui lo convertimos de binario a number
+
 func readNextBytes(file *os.File, number int) []byte {
 	bytes := make([]byte, number)
 
