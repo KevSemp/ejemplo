@@ -43,7 +43,7 @@ func writeFile(tamanio int) {
 	
 	
 	//Aqui creas el archivo binario en el path solicitado
-	file, err := os.Create("/home/alejandro/Desktop/testes/testesss.bin")
+	file, err := os.Create("testesss.bin")
 	defer file.Close()
 	if err != nil {
 		log.Fatal(err)
@@ -118,7 +118,7 @@ func readFile() {
 
 	m2 := mbr2{}
 	
-         // proceso de convertir de binario a datos 
+         // proceso de convertir de binario a datos donde va el diez es como la cantidad de datos que lees por general pones el size del struct y puse 10 por            //chingar
 	data := readNextBytes(file, 10)
 	buffer := bytes.NewBuffer(data)
         
